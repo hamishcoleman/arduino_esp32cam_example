@@ -20,7 +20,8 @@ PACKAGE_URL := https://dl.espressif.com/dl/package_esp32_index.json
 
 ARDUINO_URL := https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh
 bin/arduino-cli: /usr/bin/curl
-	curl -fsSL $(ARDUINO_URL) | sh
+	mkdir -p ~/bin
+	curl -fsSL $(ARDUINO_URL) | BINDIR=~/bin sh
 
 .PHONY: $(BOARD_FILENAME_SLUG)
 $(BOARD_FILENAME_SLUG): bin/arduino-cli

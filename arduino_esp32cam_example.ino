@@ -14,6 +14,9 @@ happily compile /all/ the .ino files in this directory
 
 Grr
 
+Research shows that they consider this a feature:
+    https://github.com/arduino/arduino-cli/issues/765
+
 
  */
 #endif
